@@ -1,1 +1,181 @@
-Hello World
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tin Nguyen</title>
+    <style>
+      body {
+        min-height: 100vh;
+        background-color: white;
+        color: #2d3748;
+        padding: 2rem;
+        font-family: Arial, sans-serif;
+      }
+      main {
+        max-width: 40rem;
+        margin: 0 auto;
+        space-y: 3rem;
+      }
+      header,
+      section {
+        margin-bottom: 3rem;
+      }
+      h1 {
+        font-size: 2.25rem;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      h3 {
+        font-weight: 500;
+      }
+      p {
+        color: #4a5568;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #3182ce;
+      }
+      .flex {
+        display: flex;
+        align-items: center;
+      }
+      .space-x-4 > * + * {
+        margin-left: 1rem;
+      }
+      .space-y-2 > * + * {
+        margin-top: 0.5rem;
+      }
+      .space-y-6 > * + * {
+        margin-top: 1.5rem;
+      }
+      .grid {
+        display: grid;
+        gap: 1rem;
+      }
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .mt-2 {
+        margin-top: 0.5rem;
+      }
+      .mb-4 {
+        margin-bottom: 1rem;
+      }
+      .leading-relaxed {
+        line-height: 1.625;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Header -->
+      <header class="space-y-2">
+        <h1>Tin Nguyen</h1>
+        <div class="text-gray-600">
+          <p>Computer Science BS Student @ Colby College</p>
+          <div class="flex items-center space-x-4 mt-2">
+            <a href="mailto:ngvt1n@proton.me" class="hover:text-blue-600"
+              >ngvt1n@proton.me</a
+            >
+            <a
+              href="https://github.com/ngvt1n"
+              class="hover:text-blue-600 flex items-center"
+            >
+              github.com/ngvt1n
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- About -->
+      <section>
+        <p class="text-gray-700 leading-relaxed">
+          I'm a Computer Science student who enjoys tinkering with technology
+          and pursuing art in my free time. I bring a unique blend of technical
+          expertise and creative skills to solve problems and contribute to my
+          community.
+        </p>
+      </section>
+
+      <!-- Experience -->
+      <section>
+        <h2>Experience</h2>
+        <div class="space-y-6">
+          <div>
+            <h3>Computer Science Teaching Assistant</h3>
+            <p class="text-gray-600 text-sm">Colby College • 2025 - Present</p>
+            <p class="mt-2 text-gray-700">
+              Supporting students in Data Structures and Algorithms, providing
+              debugging assistance and detailed feedback on projects.
+            </p>
+          </div>
+          <div>
+            <h3>Calculus Teaching Assistant</h3>
+            <p class="text-gray-600 text-sm">Colby College • 2024 - Present</p>
+            <p class="mt-2 text-gray-700">
+              Assisting students with calculus concepts during office hours and
+              recitation sessions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section>
+        <h2>Featured Projects</h2>
+        <div class="space-y-6">
+          <div>
+            <h3>Voronoi Game Competitor</h3>
+            <p class="text-gray-600 text-sm">Java, Maven, Git</p>
+            <p class="mt-2 text-gray-700">
+              1st place winner in grade-wide competition for most efficient
+              algorithm.
+            </p>
+          </div>
+          <div>
+            <h3>Bomboniera Residence Allocator</h3>
+            <p class="text-gray-600 text-sm">JavaScript, HTML, CSS, HiGHS-JS</p>
+            <p class="mt-2 text-gray-700">
+              Web application for dormitory allocation based on student
+              preferences, officially adopted for use.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section>
+        <h2>Technical Skills</h2>
+        <div class="grid grid-cols-2 gap-4 text-gray-700">
+          <div>
+            <h3>Languages</h3>
+            <p>Java, Python, C, C++, JavaScript, Rust, Go</p>
+          </div>
+          <div>
+            <h3>Frameworks & Tools</h3>
+            <p>React, Node.js, Flask, Git, Docker, AWS</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Languages -->
+      <section>
+        <h2>Languages</h2>
+        <div class="space-y-2 text-gray-700">
+          <p>English (Fluent)</p>
+          <p>Vietnamese (Native)</p>
+          <p>Italian (Advanced)</p>
+          <p>Spanish (Conversational)</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
