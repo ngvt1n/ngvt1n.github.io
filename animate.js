@@ -38,10 +38,9 @@ function prepare_animated_elts(elt, frames_generator) {
 function banner_generator(elt) {
   let output = []
   let text = elt.textContent
-  for(let f = 0; f < 80; f++) {
-    let tail = 80 - f - text.length;
-    tail = tail > 0 ? tail : 0;
-    let frame = ('/'.repeat(f) + text + '/'.repeat(tail)).slice(0, 79);
+  let model = text + '/'.repeat(80 - text.length) + text + '/'.repeat(80 - text.length);
+  for(let f = 80; f > 0; f--) {
+    let frame = model.slice(f, 80 + f);
     output.push(frame);
   }
   return output;
