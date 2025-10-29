@@ -1,0 +1,88 @@
+/* stylesheet */
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.day a {
+  color: #00f;
+}
+
+.night a {
+  color: #0ff;
+}
+
+a:hover {
+  background-color: #f0f;
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  font-size: 13px;
+  text-wrap: wrap;
+  line-height: 1.1em;
+}
+
+pre span {
+  margin: 0;
+  padding: 0;
+}
+
+.day,
+.day #font_tools {
+  color: black;
+  background-color: white;
+}
+
+.night,
+.night #font_tools {
+  color: white;
+  background-color: black;
+}
+
+/* Pixel art */
+
+* {
+  image-rendering: pixelated;
+}
+
+/* marquee */
+
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+#idcard {
+  justify-self: center;
+}
+
+#hand {
+  animation: idle-lr 1s infinite steps(2, start);
+}
+
+#body {
+  width: 80ch;
+  padding-top: 0;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer div {
+  text-align: center; 
+}
+
+@keyframes idle-lr {
+  0% {
+    transform: translateX(-1em);
+  }
+  100% {
+  }
+}
