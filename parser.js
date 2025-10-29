@@ -19,6 +19,9 @@ fetch('./resume.md')
 function parseMarkdown(markdown) {
   const lines = markdown.split('\n');
   const parsedLines = lines.map(line => {
+
+    line = convertMarkdownLinks(line);
+
     if (line.startsWith('##')) {
       line = line.replace('##', 'VV').replace('\r', '')
       line += '.'.repeat(80 - line.length) + '\n';
@@ -33,4 +36,21 @@ function parseMarkdown(markdown) {
     return line;
   });
   return parsedLines.join('\n');
+}
+
+function convertMarkdownLinks(text) {
+  const linkRegex = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+  return text.replace(linkRegex, (match, label, href) => {
+    // Add https:// if it looks like a bare domain
+    if (
+      !/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(href) &&
+      !href.startsWith('/') &&
+      !href.startsWith('./') &&
+      !href.startsWith('../') &&
+      !href.startsWith('#')
+    ) {
+      href = 'https://' + href;
+    }
+    return `<a href="${href}">${label}</a>`;
+  });
 }

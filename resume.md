@@ -4,24 +4,26 @@
     - Computer Science: TA Sessions and Project Grader
     - Math: TA Sessions and Homework Grader 
     - Italian: Language Tutor 
-- Research assitant (Colby College, 2025 - Present)
+- Research assistant (Colby College, 2025 - Present)
     - Collected manual and lidar forestry data from around Maine. 
     - Researched data processing pipelines in Python and R for lidar data. 
 
 
 
 ## My Projects
-- Residence Allocator
+- [Residence Allocator](github.com/ngvt1n/bomboniera)
     - Web application for dormitory allocation based on student preferences,
 officially adopted for use.
-- SynTest  (Ongoing)
+- [SynTest](https://github.com/ngvt1n/syntest)  (Ongoing)
     - A standard for clinical testing of synethesia realized on the web. 
 
 
 
 ## Interests
+- Making video games
+- [Colby Woodsmen](https://web.colby.edu/woodsmen/)
 - Polyglot
-    English     (---------*)
     Vietnamese  (---------*)
+    English     (---------*)
     Italian     (-------*--)
     Spanish     (---*------)
