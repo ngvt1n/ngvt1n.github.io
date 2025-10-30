@@ -22,8 +22,10 @@ function parseMarkdown(markdown) {
 
     line = convertMarkdownLinks(line);
 
+    console.log(line, line == "");
+
     if (line.startsWith('##')) {
-      line = line.replace('##', 'VV').replace('\r', '')
+      line = line.replace('##', 'VV ').replace('\r', '')
       line += '.'.repeat(80 - line.length) + '\n';
       return line
     } else if (line.startsWith('- ')) {
@@ -32,6 +34,8 @@ function parseMarkdown(markdown) {
       return line.replace('    - ', '|   |-- ');
     } else if (line.startsWith('        - ')) {
       return line.replace('        - ', '|   |   |-- ');
+    } else if (line.trim() == "") {
+      return "|";
     }
     return line;
   });

@@ -1,4 +1,3 @@
-
 ## My past experiences
 - Teaching Assistant  (Colby College,  2024 - Present)
     - Computer Science: TA Sessions and Project Grader
