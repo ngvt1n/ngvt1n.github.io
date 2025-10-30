@@ -123,26 +123,29 @@ function render_frame(frame) {
     output.push(line);
   }
   for (let x = 6; x < xmax_ch; x+=2) {
-    output[ymax_ch - 1][x] = '_'
+    output[ymax_ch - 2][x] = '_'
+    output[ymax_ch - 2][x + 1] = '_'
+    output[ymax_ch - 1][x] = ' '
     output[ymax_ch - 1][x + 1] = '/'
   }
-  output[ymax_ch - 1][xmax_ch - 1] = '>';
-  output[ymax_ch - 1][xmax_ch] = ' x';
-  for (let y = 0; y < ymax_ch; y+=2) {
+  output[ymax_ch - 2][xmax_ch + 1] = '>';
+  output[ymax_ch - 1][xmax_ch + 1] = ' x';
+  for (let y = 0; y < ymax_ch - 1; y++) {
     output[y][6] = '|'
-    output[y + 1][6] = '-'
+    output[y][5] = '_'
   }
   output[0][6] = '^';
-  output[1][5] = 'z';
+  output[0][5] = 'z';
 
   for (let i = 1; i < 12; i++) {
     output[ymax_ch - 1 - i][6 + i] = '/';
-    output[ymax_ch - 1 - i][6 + i + 1] = '_';
+    output[ymax_ch - 1 - i][6 + i - 1] = '_';
   }
 
   output[ymax_ch - 1][6] = 'O';
   output[ymax_ch - 1 - 12][6 + 12] = '/';
   output[ymax_ch - 1 - 12][6 + 12] = 'y';
+  output[ymax_ch - 1 - 11][6 + 12] = '\\';
   return output.map(row => row.join("")).join("\n");
 }
 
